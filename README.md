@@ -34,7 +34,6 @@ Users should be able to:
 
 ### Links
 
-- [Github repository](https://github.com/lipe11/advice-generator-app)
 - [Live app](https://lipe11.github.io/advice-generator-app/)
 
 ## My process
