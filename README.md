@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Github repository](https://github.com/lipe11/advice-generator-app)
+- [Live app](https://lipe11.github.io/advice-generator-app/)
 
 ## My process
 
