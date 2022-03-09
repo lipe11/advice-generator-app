@@ -13,7 +13,6 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
 
 ## Overview
@@ -77,11 +76,6 @@ The divider design and SVGs was a weird situation that made me think more on how
   }
 }
 ```
-
-### Useful resources
-
-- [Fireship - Vue.js Explained in 100 Seconds](https://www.youtube.com/watch?v=nhBVL41-_Cw)
-- [BEM - CSS Naming Conventions](http://getbem.com/naming/)
 
 ## Author
 

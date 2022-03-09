@@ -31,7 +31,6 @@
       body {
         margin: 0;
         display: grid;
-        grid-template-rows: 1fr 5em;
         place-items: center;
         height: 100vh;
         background: var(--dark-blue);
@@ -89,12 +88,6 @@
         padding-bottom: 1.5em;
         min-width: 5em;
       }
-      .attribution {
-        font-size: 11px;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
       @media (min-width: 420px) {
         .advice-box__divider {
           background-image: url('images/pattern-divider-desktop.svg');
@@ -105,34 +98,22 @@
 
   <body>
     <!-- template -->
-    <article id="app" class="advice-box" @vue:mounted="getAdvice()">
-      <template v-if="slip.id">
-        <h1 class="advice-box__title">Advice #{{ slip.id }}</h1>
-        <p class="advice-box__text">"{{ slip.advice }}"</p>
-        <div class="advice-box__divider"></div>
-        <button class="advice-box__button" @click="getAdvice"></button>
-      </template>
-      <p class="advice-box__loader" v-else>loading...</p>
-    </article>
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://www.frontendmentor.io/profile/lipe11">Luis Castillo</a>.
-    </footer>
+    <main id="app" class="advice-box" role="main">
+      <h1 class="advice-box__title">Advice #{{ slip.id }}</h1>
+      <p class="advice-box__text">"{{ slip.advice }}"</p>
+      <div class="advice-box__divider"></div>
+      <button class="advice-box__button" @click="getAdvice"></button>
+    </main>
 
     <!-- vue app -->
     <script type="module">
       import { createApp } from 'https://unpkg.com/petite-vue?module'
       createApp({
         slip: {
-          id: null,
-          advice: null,
+          id: 117,
+          advice: `It is easy to sit up and take notice, what's difficult is getting up and taking action.`,
         },
         getAdvice() {
-          this.slip.id = null // change state to "loading"
           fetch('https://api.adviceslip.com/advice')
             .then((response) => response.json())
             .then(({ slip }) => (this.slip = slip))
