@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Built with
 
-- **CSS Grid** to handle the positioning of the advice box and the footer.
-- **flexbox** to arrange the elements within the advice box.
+- **CSS Grid** for centering the advice box.
+- **flexbox** for arranging the elements within the advice box.
 - **petite-vue** to handle data fetching and data binding (initially I made this with Vue.js, but thinking it might be a bit overkill, thought it was a good oportunity to try petite-vue).
 
 ### What I learned
