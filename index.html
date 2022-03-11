@@ -52,7 +52,7 @@
       }
       .advice-box__title {
         margin: 0;
-        color: hsl(150, 100%, 66%);
+        color: var(--neon-green);
         font-size: 0.45em;
         text-transform: uppercase;
         letter-spacing: 0.5ch;
@@ -78,15 +78,8 @@
         background-repeat: no-repeat;
         background-position: center;
       }
-      .advice-box__button:hover {
-        box-shadow: 0 0 20px 10px var(--neon-green-shadow);
-      }
       .advice-box__button:active {
-        box-shadow: none;
-      }
-      .advice-box__loader {
-        padding-bottom: 1.5em;
-        min-width: 5em;
+        box-shadow: 0 0 20px 10px var(--neon-green-shadow);
       }
       @media (min-width: 420px) {
         .advice-box__divider {
@@ -105,7 +98,7 @@
       <h1 class="advice-box__title">Advice #{{ slip.id }}</h1>
       <p class="advice-box__text">"{{ slip.advice }}"</p>
       <div class="advice-box__divider"></div>
-      <button class="advice-box__button" @click="getAdvice"></button>
+      <button class="advice-box__button" @click="getAdvice">&nbsp;</button>
     </main>
 
     <!-- vue app -->

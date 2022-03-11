@@ -62,7 +62,7 @@ The dice button design was a good oportunity to try relative positioning within 
   /* other stuff */
 }
 
-.advice-box__button:hover {
+.advice-box__button:active {
   box-shadow: 0 0 20px 10px hsl(150, 100%, 66%, 0.3);
 }
 ```
