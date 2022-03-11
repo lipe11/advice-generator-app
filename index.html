@@ -70,6 +70,7 @@
         position: relative;
         top: 30px;
         align-self: center;
+        color: transparent;
         border: 0;
         border-radius: 50%;
         background-color: var(--neon-green);
@@ -98,7 +99,7 @@
       <h1 class="advice-box__title">Advice #{{ slip.id }}</h1>
       <p class="advice-box__text">"{{ slip.advice }}"</p>
       <div class="advice-box__divider"></div>
-      <button class="advice-box__button" @click="getAdvice">&nbsp;</button>
+      <button class="advice-box__button" @click="getAdvice">Get advice</button>
     </main>
 
     <!-- vue app -->
