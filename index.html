@@ -93,12 +93,15 @@
           background-image: url('images/pattern-divider-desktop.svg');
         }
       }
+      #app {
+        visibility: hidden; /* dont show until vue-petite is loaded */
+      }
     </style>
   </head>
 
   <body>
     <!-- template -->
-    <main id="app" class="advice-box" role="main">
+    <main id="app" class="advice-box" :style="{ visibility: 'visible' }">
       <h1 class="advice-box__title">Advice #{{ slip.id }}</h1>
       <p class="advice-box__text">"{{ slip.advice }}"</p>
       <div class="advice-box__divider"></div>

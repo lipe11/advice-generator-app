@@ -41,7 +41,7 @@ Users should be able to:
 
 - **CSS Grid** for centering the advice box.
 - **flexbox** for arranging the elements within the advice box.
-- **petite-vue** to handle data fetching and data binding (initially I made this with Vue.js, but thinking it might be a bit overkill, thought it was a good oportunity to try petite-vue).
+- **petite-vue** for data fetching and data binding (initially I made this with Vue, but thinking it might be a bit overkill, thought it was a good oportunity to try petite-vue).
 
 ### What I learned
 
