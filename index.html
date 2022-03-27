@@ -79,8 +79,11 @@
         background-repeat: no-repeat;
         background-position: center;
       }
-      .advice-box__button:active {
+      .advice-box__button:hover {
         box-shadow: 0 0 20px 10px var(--neon-green-shadow);
+      }
+      .advice-box__button:active {
+        box-shadow: none;
       }
       @media (min-width: 420px) {
         .advice-box__divider {
@@ -111,7 +114,7 @@
           advice: `It is easy to sit up and take notice, what's difficult is getting up and taking action.`,
         },
         getAdvice() {
-          fetch('https://api.adviceslip.com/advice')
+          fetch('https://api.adviceslip.com/advice', { cache: 'no-cache' })
             .then((response) => response.json())
             .then(({ slip }) => (this.slip = slip))
             .catch(console.error)
