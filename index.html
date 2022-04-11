@@ -43,7 +43,7 @@
         flex-direction: column;
         align-items: stretch;
         width: 90%;
-        max-width: 500px;
+        max-width: 600px;
         padding: 1.5em 1.5em 0 1.5em;
         font-size: 1.75em;
         font-weight: 800;
@@ -84,6 +84,11 @@
       }
       .advice-box__button:active {
         box-shadow: none;
+        top: 31px;
+        left: 1px;
+      }
+      .advice-box__button:disabled {
+        background-color: #ccc;
       }
       @media (min-width: 420px) {
         .advice-box__divider {
@@ -102,7 +107,13 @@
       <h1 class="advice-box__title">Advice #{{ slip.id }}</h1>
       <p class="advice-box__text">"{{ slip.advice }}"</p>
       <div class="advice-box__divider"></div>
-      <button class="advice-box__button" @click="getAdvice">Get advice</button>
+      <button
+        class="advice-box__button"
+        @click="getAdvice"
+        :disabled="disabled"
+      >
+        Get advice
+      </button>
     </main>
 
     <!-- vue app -->
@@ -112,12 +123,19 @@
         slip: {
           id: 117,
           advice: `It is easy to sit up and take notice, what's difficult is getting up and taking action.`,
+          disabled: false,
         },
         getAdvice() {
+          if (this.disabled) return
+          this.disabled = true
           fetch('https://api.adviceslip.com/advice', { cache: 'no-cache' })
             .then((response) => response.json())
             .then(({ slip }) => (this.slip = slip))
             .catch(console.error)
+            .finally(() => this.enableAfterTimeout())
+        },
+        enableAfterTimeout() {
+          setTimeout(() => (this.disabled = false), 2000)
         },
       }).mount('#app')
     </script>
