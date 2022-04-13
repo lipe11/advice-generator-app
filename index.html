@@ -88,7 +88,7 @@
         left: 1px;
       }
       .advice-box__button:disabled {
-        background-color: #ccc;
+        background-image: url('images/hourglass-svgrepo-com.svg');
       }
       @media (min-width: 420px) {
         .advice-box__divider {
@@ -105,7 +105,7 @@
     <!-- template -->
     <main id="app" class="advice-box" :style="{ visibility: 'visible' }">
       <h1 class="advice-box__title">Advice #{{ slip.id }}</h1>
-      <p class="advice-box__text">"{{ slip.advice }}"</p>
+      <q class="advice-box__text">{{ slip.advice }}</q>
       <div class="advice-box__divider"></div>
       <button
         class="advice-box__button"
@@ -123,8 +123,8 @@
         slip: {
           id: 117,
           advice: `It is easy to sit up and take notice, what's difficult is getting up and taking action.`,
-          disabled: false,
         },
+        disabled: false,
         getAdvice() {
           if (this.disabled) return
           this.disabled = true
